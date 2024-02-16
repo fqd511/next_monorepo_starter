@@ -1,0 +1,19 @@
+@import "main";
+
+.root {
+  min-width: $content-width-min;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.homepage {
+  min-height: 80vh;
+  @include flex-column;
+  gap: 2rem;
+  justify-content: center;
+
+  h2 {
+    font-size: 4rem;
+  }
+}

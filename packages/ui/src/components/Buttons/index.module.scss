@@ -1,0 +1,64 @@
+@import "@deps/ui/globals";
+
+.button {
+}
+
+.primary {
+	@include flex-row;
+	background: #1a1a1a !important;
+	border-radius: 2.4375rem;
+	box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.25) !important;
+	gap: 0.75rem;
+	height: auto;
+	padding: 1.5rem 3rem;
+
+	color: #fff;
+	font-size: $font-size-7;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-align: center;
+}
+
+.iconButton {
+	@include flex-row;
+	justify-content: center;
+	padding: 0;
+}
+
+.transparentButton {
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+
+	> span {
+		color: #000 !important;
+	}
+}
+
+.linkButton {
+	> span {
+		color: #1a1a1a;
+		font-size: $font-size-normal;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.5rem; /* 150% */
+		text-align: right;
+		text-decoration-line: underline;
+	}
+}
+
+.closeButton {
+	box-shadow: none !important;
+	position: absolute;
+	right: 6rem;
+	top: 6rem;
+	z-index: z("float");
+}
+
+.blackArrowButton {
+	background: var(--Text-Primary, #0b0b0b);
+	border-radius: 0.625rem !important;
+	height: 2.5rem;
+	width: 2.5rem;
+}

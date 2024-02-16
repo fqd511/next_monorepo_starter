@@ -1,0 +1,47 @@
+{
+  "name": "next_monorepo_starter",
+  "private": true,
+  "scripts": {
+    "build:all": "turbo build",
+    "build:all-no-cache-read": "turbo build --force",
+    "build:all-no-cache-write": "turbo build --no-cache",
+    "build:template": "turbo build --filter=template",
+    "test-watch:all": "dotenv -- turbo run test:watch",
+    "test-watch:ui": "dotenv -- turbo test:watch --filter=@deps/ui",
+    "test-watch:template": "dotenv -- turbo test:watch --filter=template",
+    "test:all": "dotenv -- turbo run test",
+    "test:ui": "dotenv -- turbo test --filter=@deps/ui",
+    "test:core": "dotenv -- turbo test --filter=@deps/core",
+    "test:template": "dotenv -- turbo test --filter=template",
+    "dev:all": "dotenv -- turbo run dev",
+    "dev:template": "dotenv -- turbo dev --filter=@deps/ui --filter=template",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo lint",
+    "reset": "rm -rf node_modules && npm i"
+  },
+  "devDependencies": {
+    "@deps/eslint-config": "*",
+    "@deps/typescript-config": "*",
+    "@iconify/react": "^4.1.1",
+    "@testing-library/react": "^14.2.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "jsdom": "^24.0.0",
+    "prettier": "^3.1.0",
+    "sass": "^1.69.5",
+    "turbo": "^1.12.0",
+    "vite-tsconfig-paths": "^4.3.1",
+    "vitest": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.2.3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "dotenv-cli": "^7.3.0"
+  }
+}

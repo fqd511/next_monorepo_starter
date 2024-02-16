@@ -1,0 +1,23 @@
+{
+  "name": "@deps/core",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "typescript": "latest"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "antd": "^5.12.5"
+  },
+  "devDependencies": {
+    "@deps/eslint-config": "*",
+    "@deps/typescript-config": "*"
+  }
+}

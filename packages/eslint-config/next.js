@@ -1,0 +1,59 @@
+const { resolve } = require("node:path");
+
+const project = resolve(process.cwd(), "tsconfig.json");
+
+/** @type {import("eslint").Linter.Config} */
+module.exports = {
+  extends: [
+    "eslint:recommended",
+    "prettier",
+    require.resolve("@vercel/style-guide/eslint/next"),
+    "eslint-config-turbo",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+  ],
+  globals: {
+    React: true,
+    JSX: true,
+  },
+  env: {
+    node: true,
+    browser: true,
+  },
+  plugins: ["only-warn"],
+  settings: {
+    "import/resolver": {
+      typescript: {
+        project,
+      },
+    },
+  },
+  ignorePatterns: [
+    // Ignore dotfiles
+    ".*.js",
+    "node_modules/",
+    "out/",
+    "dist/",
+  ],
+  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
+  rules: {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "import/order": [
+      "warn",
+      {
+        groups: [
+          "type",
+          "object",
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+        ],
+      },
+    ],
+  },
+};

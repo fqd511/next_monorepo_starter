@@ -1,0 +1,46 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3009",
+    "dev:type": "npm run update-type && next dev --port 3009",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "upload": "echo 'no upload for now'",
+    "deploy": "npm run build && npm run upload",
+    "vercel": "vercel --prod",
+    "update-type": "chmod +x ./helper/update-type.sh && ./helper/update-type.sh",
+    "lint": "eslint . --max-warnings 0",
+    "lint-fix": "eslint . --fix",
+    "lint-fix-dry-run": "eslint . --fix-dry-run"
+  },
+  "dependencies": {
+    "@deps/core": "*",
+    "@deps/ui": "*",
+    "axios": "^1.6.4",
+    "framer-motion": "^10.17.9",
+    "immer": "^10.0.3",
+    "next": "^14.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "swr": "^2.2.4",
+    "use-immer": "^0.9.0"
+  },
+  "devDependencies": {
+    "@deps/eslint-config": "*",
+    "@deps/typescript-config": "*",
+    "@next/eslint-plugin-next": "^14.0.2",
+    "@types/eslint": "^8.44.7",
+    "@types/node": "^17.0.12",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
+  }
+}
