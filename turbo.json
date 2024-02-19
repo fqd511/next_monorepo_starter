@@ -32,6 +32,9 @@
     "dev": {
       "cache": false,
       "persistent": true,
+      "dependsOn": [
+        "update-type"
+      ],
       "dotEnv": [
         ".env.development.local",
         ".env.local",
