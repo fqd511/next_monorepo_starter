@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 3009",
-    "dev:type": "npm run update-type && next dev --port 3009",
+    "dev:type": "npm run update-type && npm run dev",
     "build": "next build",
     "start": "next start",
     "test": "vitest run",

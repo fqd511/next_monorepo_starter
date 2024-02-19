@@ -15,6 +15,7 @@
     "test:template": "dotenv -- turbo test --filter=template",
     "dev:all": "dotenv -- turbo run dev",
     "dev:template": "dotenv -- turbo dev --filter=@deps/ui --filter=template",
+    "dev:ui": "dotenv -- turbo dev --filter=@deps/ui",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
     "reset": "rm -rf node_modules && npm i"
