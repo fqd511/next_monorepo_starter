@@ -9,6 +9,7 @@ template for project in mono-repo
 - change env in .env.* files
 - add env variable in root [turbo.json](../../turbo.json)
 - duplicate .env.development and rename to .env.development.local
+- update `update-type` script to `chmod +x ./helper/update-type.sh && ./helper/update-type.sh`
 - replace `template` in /api files
 - check type declaration in [state.user.tsx](./helper/state/state.user.tsx)
 - update variables in [const.ts](./helper/const.ts)

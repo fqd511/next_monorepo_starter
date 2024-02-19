@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3009",
+    "dev": "next dev --port 3010",
     "build": "next build",
     "start": "next start",
     "test": "vitest run",
@@ -11,7 +11,7 @@
     "upload": "echo 'no upload for now'",
     "deploy": "npm run build && npm run upload",
     "vercel": "vercel --prod",
-    "update-type": "chmod +x ./helper/update-type.sh && ./helper/update-type.sh",
+    "update-type": "echo 'add type-update after .env.development.local'",
     "lint": "eslint . --max-warnings 0",
     "lint-fix": "eslint . --fix",
     "lint-fix-dry-run": "eslint . --fix-dry-run"
